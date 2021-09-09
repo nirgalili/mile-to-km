@@ -6,6 +6,7 @@ window = Tk()
 text1 = "Mile to Km Converter"
 window.title(text1)
 window.config(padx=20, pady=20)
+window.minsize(290, 100)
 
 # label
 
@@ -26,8 +27,8 @@ my_label4.grid(column=2, row=2)
 
 def button_clicked():
     mile = float(input.get())
-    Km = mile*1.60934
-    my_label4.config(text=round(Km, 2))
+    Km = round(mile*1.60934, 2)
+    my_label4.config(text= f"{Km}")
 
 
 button = Button(text="Calculate")
