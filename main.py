@@ -18,15 +18,19 @@ my_label2.grid(column=3, row=2)
 my_label3 = Label(text="is equal to")
 my_label3.grid(column=1, row=2)
 
+calculated = "5"
+my_label4 = Label(text=calculated)
+my_label4.grid(column=2, row=2)
+
 # button
 
-# def button_clicked():
-#     text2 = input.get()
-#     my_label.config(text=text2)
+def button_clicked():
+    calculated = "6"
+    my_label4.config(text=calculated)
 
 
 button = Button(text="Calculate")
-# button["command"] = button_clicked
+button["command"] = button_clicked
 button.grid(column=2, row=3)
 
 #Entry
