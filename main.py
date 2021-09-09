@@ -18,15 +18,16 @@ my_label2.grid(column=3, row=2)
 my_label3 = Label(text="is equal to")
 my_label3.grid(column=1, row=2)
 
-calculated = "5"
+calculated = 0
 my_label4 = Label(text=calculated)
 my_label4.grid(column=2, row=2)
 
 # button
 
 def button_clicked():
-    calculated = "6"
-    my_label4.config(text=calculated)
+    mile = float(input.get())
+    Km = mile*1.60934
+    my_label4.config(text=round(Km, 2))
 
 
 button = Button(text="Calculate")
